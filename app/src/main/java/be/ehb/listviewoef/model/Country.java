@@ -1,8 +1,12 @@
+package be.ehb.listviewoef.model;
+
+import android.support.annotation.NonNull;
+
 /**
  * Created by Q on 18-2-2018.
  */
 
-public class Country {
+public class Country implements Comparable<Country> {
 
     private String name;
     private String language;
@@ -30,9 +34,16 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country{" +
+        return "be.ehb.listviewoef.model.Country{" +
                 "name='" + name + '\'' +
                 ", language='" + language + '\'' +
                 '}';
+    }
+
+
+
+    @Override
+    public int compareTo(@NonNull Country country) {
+        return this.name.compareTo(country.name);
     }
 }

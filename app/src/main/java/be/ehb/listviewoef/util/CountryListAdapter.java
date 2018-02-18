@@ -1,3 +1,5 @@
+package be.ehb.listviewoef.util;
+
 import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +9,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import be.ehb.listviewoef.R;
+import be.ehb.listviewoef.model.Country;
 
 /**
  * Created by Q on 18-2-2018.
@@ -64,7 +67,7 @@ public class CountryListAdapter extends BaseAdapter {
         Country currentCountry = countryList.get(i);
 
         row.tvName.setText(currentCountry.getName());
-        row.tvName.setText(currentCountry.getLanguage());
+        row.tvLanguage.setText(currentCountry.getLanguage());
 
 
         return view;
